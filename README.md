@@ -42,9 +42,9 @@ You can now access the values in the following ways:
 ```html
 <!-- Numberic Array -->
 <h1><?php print($dataNumericArray[0]); ?></h1>
-<h2><?php print($dataNumericArray[2]); ?></h2>
-<h3><?php print($dataNumericArray[3]); ?></h3>
-<p><?php print($dataNumericArray[4]); ?></p>
+<h2><?php print($dataNumericArray[1]); ?></h2>
+<h3><?php print($dataNumericArray[2]); ?></h3>
+<p><?php print($dataNumericArray[3]); ?></p>
 
 <!-- Associative Array -->
 <h1><?php print($dataAssocArray["h1"]); ?></h1>
