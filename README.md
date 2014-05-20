@@ -35,7 +35,7 @@ foreach($data as $row) {
     $dataNumericArray[$i] = $value;
     $i++;
     // Associative array
-    $dataAssocArray["$section"] = $value;
+    $dataAssocArray[$section] = $value;
 }
 ```
 You can now access the values in the following ways:
@@ -47,8 +47,8 @@ You can now access the values in the following ways:
 <p><?php print($dataNumericArray[3]); ?></p>
 
 <!-- Associative Array -->
-<h1><?php print($dataAssocArray["h1"]); ?></h1>
-<h2><?php print($dataAssocArray["h2"]); ?></h2>
-<h3><?php print($dataAssocArray["h3"]); ?></h3>
-<p><?php print($dataAssocArray["p"]); ?></p>
+<h1><?php print($dataAssocArray['h1']); ?></h1>
+<h2><?php print($dataAssocArray['h2']); ?></h2>
+<h3><?php print($dataAssocArray['h3']); ?></h3>
+<p><?php print($dataAssocArray['p']); ?></p>
 ```
