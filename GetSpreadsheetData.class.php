@@ -49,13 +49,17 @@ class GetSpreadsheetData {
 
 	}
 
-	public function viewRawData() {
+	private function viewRawData() {
 		$data = $this->returnData();
 		if($data) {
 			echo "<pre>";
 			print_r($data);
 			echo "</pre>";
 		}
+	}
+
+	public function __toString() {
+		return (string)$this->viewRawData();
 	}
 
 }

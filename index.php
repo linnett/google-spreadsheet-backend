@@ -12,6 +12,8 @@
     <body>
 	    <?php
 
+	    	# This index page is purely for demonstation purposes.
+
 	    	require_once 'GetSpreadsheetData.class.php';
 
 	    	$spreadsheetId = "1dM1fHXxv0EifvmG6uQiNrZJHHJOBKGPZ2YRBWMzgJsw";
@@ -37,16 +39,16 @@
 	    ?>
 
 	    	<!-- Numberic Array -->
-			<h1><?php print($dataNumericArray[0]); ?></h1>
-			<h2><?php print($dataNumericArray[1]); ?></h2>
-			<h3><?php print($dataNumericArray[2]); ?></h3>
-			<p><?php print($dataNumericArray[3]); ?></p>
+			<h1><?php echo $dataNumericArray[0]; ?></h1>
+			<h2><?php echo $dataNumericArray[1]; ?></h2>
+			<h3><?php echo $dataNumericArray[2]; ?></h3>
+			<p><?php echo $dataNumericArray[3]; ?></p>
 
 			<!-- Associative Array -->
-			<h1><?php print($dataAssocArray["h1"]); ?></h1>
-			<h2><?php print($dataAssocArray["h2"]); ?></h2>
-			<h3><?php print($dataAssocArray["h3"]); ?></h3>
-			<p><?php print($dataAssocArray["p"]); ?></p>
+			<h1><?php echo $dataAssocArray["h1"]; ?></h1>
+			<h2><?php echo $dataAssocArray["h2"]; ?></h2>
+			<h3><?php echo $dataAssocArray["h3"]; ?></h3>
+			<p><?php echo $dataAssocArray["p"]; ?></p>
 
     </body>
 </html>

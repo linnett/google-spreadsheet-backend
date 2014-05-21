@@ -16,9 +16,9 @@ Instantiate the class:
 $spreadsheetId = "1dM1fHXxv0EifvmG6uQiNrZJHHJOBKGPZ2YRBWMzgJsw";
 $GetSpreadsheetData = new GetSpreadsheetData($spreadsheetId);
 ```
-The following will print out the raw data from the spreadsheet.
+After instantiating the class, you can now view raw data from the spreadsheet. The following code will print out the raw data in the browser:
 ```php
-$GetSpreadsheetData->viewRawData();
+echo $GetSpreadsheetData;
 ```
 Return data into an array:
 ```php
@@ -35,20 +35,22 @@ foreach($data as $row) {
     $dataNumericArray[$i] = $value;
     $i++;
     // Associative array
-    $dataAssocArray["$section"] = $value;
+    $dataAssocArray[$section] = $value;
 }
 ```
+Each field is called `gsx$` followed by the title.
+
 You can now access the values in the following ways:
 ```html
 <!-- Numberic Array -->
-<h1><?php print($dataNumericArray[0]); ?></h1>
-<h2><?php print($dataNumericArray[1]); ?></h2>
-<h3><?php print($dataNumericArray[2]); ?></h3>
-<p><?php print($dataNumericArray[3]); ?></p>
+<h1><?php echo $dataNumericArray[0]; ?></h1>
+<h2><?php echo $dataNumericArray[1]; ?></h2>
+<h3><?php echo $dataNumericArray[2]; ?></h3>
+<p><?php echo $dataNumericArray[3]; ?></p>
 
 <!-- Associative Array -->
-<h1><?php print($dataAssocArray["h1"]); ?></h1>
-<h2><?php print($dataAssocArray["h2"]); ?></h2>
-<h3><?php print($dataAssocArray["h3"]); ?></h3>
-<p><?php print($dataAssocArray["p"]); ?></p>
+<h1><?php echo $dataAssocArray["h1"]; ?></h1>
+<h2><?php echo $dataAssocArray["h2"]; ?></h2>
+<h3><?php echo $dataAssocArray["h3"]; ?></h3>
+<p><?php echo $dataAssocArray["p"]; ?></p>
 ```
