@@ -37,9 +37,9 @@ class GetSpreadsheetData {
 
 		// Check if the data returned is valid JSON.
 		if (!is_object(json_decode($data))) {
-    	echo $data;
+    			echo $data;
 			return false;
-    }
+    		}
 
 		$json = json_decode($data);
 
