@@ -2,9 +2,6 @@
 
 	# This index page is purely for demonstation purposes.
 	require_once 'GetSpreadsheetData.class.php';
-		// header('Content-type: application/json');
-
-		// https://docs.google.com/spreadsheets/d/1B40WXBz1d3zkR5-ZFieKiannA-WGScUEf3MANYI0jo0/pubhtml
 
 	$spreadsheetId = "1B40WXBz1d3zkR5-ZFieKiannA-WGScUEf3MANYI0jo0";
 	$GetSpreadsheetData = new GetSpreadsheetData($spreadsheetId);
@@ -39,5 +36,12 @@
 		array_push($results, $currentRow);
 	}
 
-	print_r( json_encode($results) );
+	// Must check...
+	try {
+		$jsonData = json_encode($results);
+	} catch (Exception $e) {
+		print_r($e);
+	}
+
+	print_r( $jsonData );
 ?>
